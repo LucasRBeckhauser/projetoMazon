@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Mazon</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+        
+        <div class="login-container">
+            <h1>Login</h1>
+            <form class="login-form" onsubmit="event.preventDefault(); redirecionarParaOutraPagina();">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+        
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+        
+                <button type="submit">Entrar</button>
+        
+                <!-- Elemento para exibir mensagem de erro -->
+                <p id="mensagem-erro" style="color: red;"></p>
+            </form>
+        </div>
+
+
+    </main>
+    
+    <footer>
+
+
+    </footer>
+</body>
+</html>
