@@ -9,7 +9,7 @@ padding: 0;
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgba(252, 118, 118, 0.158);
     margin: 0;
     display: flex;
     align-items: center;
