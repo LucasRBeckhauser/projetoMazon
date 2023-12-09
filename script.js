@@ -71,9 +71,18 @@ axios.get('http://localhost:3006/teste')
 });
 };
 
-
-//criar uma função que coloca o bloco de código usando o response como parametro 
-
+if (id) 
+{
+    // Se existe um ID, é uma atualização
+    axios.put(`http://localhost:3006/teste/${id}`, novoItem)
+      .then(response => {
+        alertaUpdate(response);
+        criarGet();
+      })
+      .catch(error => {
+        console.error('Erro ao atualizar usuário', error);
+      });
+}
 
 function chamaGet (response) 
 {
@@ -97,7 +106,4 @@ function alertaPost (response) {
   console.log (response)
   alert ('Operação efetuada com sucesso.')
 }
-
-
-
 

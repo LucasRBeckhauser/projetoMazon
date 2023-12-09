@@ -14,7 +14,7 @@ app.use(cors())
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'Beckhauser20!',
   database: 'projeto_mazon',
 });
 
