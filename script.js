@@ -1,7 +1,6 @@
 // import { axios } from "axios";
 
 
-
 // configurações do front end
 
 const modal = document.querySelector('.modal-container');
@@ -47,7 +46,7 @@ btnSalvar.onclick = e => {
 
   axios.post('http://localhost:3006/teste', itens)
     .then(response => {
-      console.log(response);
+      alertaPost (response);
       criarGet();
 
     })
@@ -64,25 +63,41 @@ const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens))
 function criarGet () {
 axios.get('http://localhost:3006/teste')
 .then(response => {
-// Limpe o conteúdo atual da tabela
-        tbody.innerHTML = '';
-
-      // Adicione os novos dados à tabela
-      response.data.forEach(item => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${item.nome}</td>
-          <td>${item.funcao}</td>
-          <td>${item.salario}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-
-
-console.log(response);
-
+  chamaGet (response)
+  console.log(response);
 })
 .catch(error => {
   console.error('Erro ao efetuar o get');
 });
 };
+
+
+//criar uma função que coloca o bloco de código usando o response como parametro 
+
+
+function chamaGet (response) 
+{
+// Limpe o conteúdo atual da tabela
+  tbody.innerHTML = '';
+
+  // Adicione os novos dados à tabela
+  response.data.forEach(item => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${item.nome}</td>
+      <td>${item.funcao}</td>
+      <td>${item.salario}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+}
+
+function alertaPost (response) {
+  console.log (response)
+  alert ('Operação efetuada com sucesso.')
+}
+
+
+
+
