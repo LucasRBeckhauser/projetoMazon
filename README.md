@@ -2,9 +2,9 @@
 
 Projeto em desenvolvimento. 
 
-O objetivo é criar um crud através de uma aplicação web, cujo objetivo é cadastrar entidades de baixa renda, no que diz respeito a questão alimentícia.
+O objetivo é desenvolver um aplicativo web para realizar o cadastro de entidades em situação de vulnerabilidade alimentar.
 
-O objetivo é permitir a inscrição delas na aplicação, para que as mesmas recebam alimentos em bom estado que não são comercializados nos mercados, visando a redução do desperdício.
+A proposta é viabilizar a inscrição dessas entidades na aplicação, possibilitando que recebam alimentos em bom estado que não são comercializados nos mercados, com o intuito de reduzir o desperdício.
 
 A aplicação se conectará ao back-end, que será feito em Java com SpringBoot. O banco de dados a ser utilizado será o MySql.
 
