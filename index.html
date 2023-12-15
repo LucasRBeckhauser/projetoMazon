@@ -16,77 +16,181 @@
 
 <body>
 
-
   <header id="header">
     <div class="cabecalho">
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="cabecalho_cadastro" href="index.html">Cadastro</a></li>
-          <li><a class="cabecalho_registro " href="registro.html">Registros</a></li>
+          <a class="cabecalho_cadastro" href="index.html">Cadastro</a>
         </ul>
       </nav>
-
     </div>
   </header>
 
   <main>
-    
-
-
     <h2>Formulário de usuário</h2>
-
-    <form id="empresaForm">
+    <form id="usuarioForm">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome"required>
+      <input type="text" id="nomeUsuario" name="nome" required>
   
       <label for="cnpj">CNPJ:</label>
-      <input type="text" id="cnpj" name="cnpj" required>
+      <input type="text" id="cnpjUsuario" name="cnpj" required>
   
       <label for="endereco">Endereço:</label>
-      <input type="text" id="endereco" name="endereco" required>
+      <input type="text" id="enderecoUsuario" name="endereco" required>
   
       <label for="telefone">Telefone:</label>
-      <input type="text" id="telefone" name="telefone" required>
+      <input type="text" id="telefoneUsuario" name="telefone" required>
   
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="emailUsuario" name="email" required>
   
       <label for="tipo">Tipo:</label>
-      <input type="text" id="tipo" name="tipo" required>
+      <input type="text" id="tipoUsuario" name="tipo" required>
   
       <button type="submit">Enviar</button>
     </form>
 
+    <h2>Formulário de doação</h2>
+    <form id="doacaoForm">
+      <label for="tipoDoacao">Tipo:</label>
+      <input type="text" id="tipoDoacao" name="tipo" required>
 
-  <h2>Formulário de doação</h2>
+      <label for="quantidadeDoacao">Quantidade:</label>
+      <input type="number" id="quantidadeDoacao" name="quantidade" required>
 
-  <form id="doacaoForm">
-    <label for="tipo">Tipo:</label>
-    <input type="text" id="tipo" name="tipo" required>
+      <label for="disponibilidadeDoacao">Disponibilidade:</label>
+      <input type="text" id="disponibilidadeDoacao" name="disponibilidade" required>
 
-    <label for="quantidade">Quantidade:</label>
-    <input type="number" id="quantidade" name="quantidade" required>
+      <label for="validadeDoacao">Validade:</label>
+      <input type="date" id="validadeDoacao" name="validade" required>
 
-    <label for="disponibilidade">Disponibilidade:</label>
-    <input type="text" id="disponibilidade" name="disponibilidade"  required>
+      <button type="submit">Enviar</button>
+    </form>
 
-    <label for="validade">Validade:</label>
-    <input type="date" id="validade" name="validade" required>
+    <h2>Formulário de produto</h2>
+    <form id="produtoForm">
+      <label for="nomeProduto">Nome:</label>
+      <input type="text" id="nomeProduto" name="nome" required>
 
-    <button type="submit">Enviar</button>
-  </form>
+      <button type="submit">Enviar</button>
+    </form>
 
-  <h2>Formulário de produto </h2>
+    <h2>Tabela de Usuários</h2>
+    <table id="tabelaUsuarios">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CNPJ</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Tipo</th>
+          <th>Id Banco</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  
+    <h2>Tabela de Doações</h2>
+    <table id="tabelaDoacoes">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Quantidade</th>
+          <th>Disponibilidade</th>
+          <th>Validade</th>
+          <th>Id Banco</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  
+    <h2>Tabela de Produtos</h2>
+    <table id="tabelaProdutos">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Id Banco</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-  <form id="produtoForm">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+    <form id="excluirForm">
+      <h2>Campo para deletar</h2>
+      <label for="tipoExcluir">Tipo:</label>
+      <select id="tipoExcluir" name="tipoExcluir">
+        <option value="usuario">Usuário</option>
+        <option value="doacao">Doação</option>
+        <option value="produto">Produto</option>
+      </select>
+    
+      <label for="idExcluir">ID:</label>
+      <input type="text" id="idExcluir" name="idExcluir" required>
+    
+      <button type="submit">Excluir</button>
+    </form>
 
-    <button type="submit">Enviar</button>
-  </form>
+    <h2>Atualizar Informações - Usuário</h2>
+<form id="atualizarUsuarioForm">
+  <label for="idAtualizarUsuario">ID:</label>
+  <input type="text" id="idAtualizarUsuario" name="idAtualizarUsuario" required>
+
+  <label for="nomeAtualizarUsuario">Nome:</label>
+  <input type="text" id="nomeAtualizarUsuario" name="nomeAtualizarUsuario">
+
+  <label for="cnpjAtualizarUsuario">CNPJ:</label>
+  <input type="text" id="cnpjAtualizarUsuario" name="cnpjAtualizarUsuario">
+
+  <label for="enderecoAtualizarUsuario">Endereço:</label>
+  <input type="text" id="enderecoAtualizarUsuario" name="enderecoAtualizarUsuario">
+
+  <label for="telefoneAtualizarUsuario">Telefone:</label>
+  <input type="text" id="telefoneAtualizarUsuario" name="telefoneAtualizarUsuario">
+
+  <label for="emailAtualizarUsuario">Email:</label>
+  <input type="email" id="emailAtualizarUsuario" name="emailAtualizarUsuario">
+
+  <label for="tipoAtualizarUsuario">Tipo:</label>
+  <input type="text" id="tipoAtualizarUsuario" name="tipoAtualizarUsuario">
+
+  <button type="submit">Atualizar Usuário</button>
+</form>
+
+<h2>Atualizar Informações - Doação</h2>
+<form id="atualizarDoacaoForm">
+  <label for="idAtualizarDoacao">ID:</label>
+  <input type="text" id="idAtualizarDoacao" name="idAtualizarDoacao" required>
+
+  <label for="tipoAtualizarDoacao">Tipo:</label>
+  <input type="text" id="tipoAtualizarDoacao" name="tipoAtualizarDoacao">
+
+  <label for="quantidadeAtualizar">Quantidade:</label>
+  <input type="number" id="quantidadeAtualizar" name="quantidadeAtualizar">
+
+  <label for="disponibilidadeAtualizar">Disponibilidade:</label>
+  <input type="text" id="disponibilidadeAtualizar" name="disponibilidadeAtualizar">
+
+  <label for="validadeAtualizar">Validade:</label>
+  <input type="date" id="validadeAtualizar" name="validadeAtualizar">
+
+  <button type="submit">Atualizar Doação</button>
+</form>
+
+<h2>Atualizar Informações - Produto</h2>
+<form id="atualizarProdutoForm">
+  <label for="idAtualizarProduto">ID:</label>
+  <input type="text" id="idAtualizarProduto" name="idAtualizarProduto" required>
+
+  <label for="nomeAtualizarProduto">Nome:</label>
+  <input type="text" id="nomeAtualizarProduto" name="nomeAtualizarProduto">
+
+  <button type="submit">Atualizar Produto</button>
+</form>
+    
 
   </main>
+
   <script src="script.js"></script>
 
 </body>
