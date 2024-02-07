@@ -2,6 +2,8 @@
 
 Projeto em desenvolvimento. 
 
+1- O projeto disponível neste momento trata-se de um protótipo de baixa fidelidade. Com a finalização do Back-End, o front será adaptado para o utilizo do React. 
+
 O objetivo é desenvolver um aplicativo web para realizar o cadastro de entidades em situação de vulnerabilidade alimentar.
 
 A proposta é viabilizar a inscrição dessas entidades na aplicação, possibilitando que recebam alimentos em bom estado que não são comercializados nos mercados, com o intuito de reduzir o desperdício.
